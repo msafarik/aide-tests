@@ -4,5 +4,6 @@ tag:
 - TIPpass_Security
 - Tier1
 - Tier1security
+- ImageMode
 extra-summary: /CoreOS/aide/Sanity/aide-rules-test
 extra-nitrate: TC#0059821

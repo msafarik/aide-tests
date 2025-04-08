@@ -1,0 +1,13 @@
+FROM localhost/bootc:latest
+COPY yum.repos.d/* /etc/yum.repos.d/
+# Set environment variable for AIDE_TEST_DIR
+ENV AIDE_TEST_DIR=/var/aide-testing-dir
+# Initialize AIDE
+COPY aide-testing-dir/ $AIDE_TEST_DIR/
+RUN aide -i -c $AIDE_TEST_DIR/aide.conf
+RUN mv -f $AIDE_TEST_DIR/db/aide.db.new.gz $AIDE_TEST_DIR/db/aide.db.gz
+RUN rm -f $AIDE_TEST_DIR/data/file1
+RUN echo 'B' > $AIDE_TEST_DIR/data/file2
+RUN chmod a+x $AIDE_TEST_DIR/data/file3
+RUN echo 'A' > $AIDE_TEST_DIR/data/file4
+RUN aide --check -c $AIDE_TEST_DIR/aide.conf || true
