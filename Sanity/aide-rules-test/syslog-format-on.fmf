@@ -8,6 +8,7 @@ tag:
 - Tier1
 - Tier1security
 - TierCandidatesPASS
+- ImageMode
 extra-summary: SYSLOG_FORMAT=true /CoreOS/aide/Sanity/aide-rules-test
 extra-nitrate: TC#0544948
 adjust+:

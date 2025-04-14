@@ -1,0 +1,11 @@
+summary: tests aide --config-check command
+description: ''
+contact: Marek Šafařík <msafarik@redhat.com>
+test: ./runtest.sh
+require+:
+  - library(distribution/testUser)
+recommend:
+- aide
+- gcc
+duration: 5m
+enabled: true

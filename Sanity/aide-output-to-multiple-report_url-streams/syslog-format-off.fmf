@@ -6,5 +6,6 @@ tag:
 - Tier1
 - Tier1security
 - TierCandidatesPASS
+- ImageMode
 extra-summary: /CoreOS/aide/Sanity/aide-output-to-multiple-report_url-streams
 extra-nitrate: TC#0544982

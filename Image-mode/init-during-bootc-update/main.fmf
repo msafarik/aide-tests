@@ -1,0 +1,19 @@
+summary: Aide init during bootc build
+description: Init aide during container bootc build. Scenario check if aide work during build mode and if runtime instance of aide is affected after update.
+contact: Patrik Koncity <pkoncity@redhat.com>
+component:
+- aide
+test: ./runtest.sh
+tag:
+- ImageMode
+framework: beakerlib
+recommend:
+- bootc
+- podman
+- aide
+duration: 15m
+enabled: false
+
+adjust+:
+  - when: deploymentmode is defined and deploymentmode == image
+    enabled: true
